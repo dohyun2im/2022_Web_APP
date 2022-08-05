@@ -12,7 +12,9 @@
      아이디와 비밀번호 입력받아서 회원아이디가 admin이고 비밀번호가 1234이면 로그인 성공 아니면 실패-->
      
      <script type="text/javascript">
-    /*      
+        
+     
+     
      //1번문제
      let a = Number(prompt('숫자입력 1'))
      let b = Number(prompt('숫자입력 2'))
@@ -43,7 +45,7 @@
      if( 최댓값2 < i){최댓값2 = i}
      alert(최댓값2)
      
-     //4번문제 변수의 값 교환[임시변수선언]
+     //4번문제 변수의 값 교환[임시변수선언] 작은순
       let j = Number(prompt('숫자입력 10'))
       let k = Number(prompt('숫자입력 11'))
       let l = Number(prompt('숫자입력 12'))
@@ -75,31 +77,31 @@
       let l3 = Number(prompt('숫자입력 15'))
       let m4 = Number(prompt('숫자입력 16'))
       let tmp2 = 0
-      if(j1<k2){
+      if(j1>k2){
     	 tmp2=j1
     	 j1=k2
     	 k2=l3
     	 l3=tmp2
       }
-      if(j1<l3){
+      if(j1>l3){
     	  tmp2=j1
     	  j1=l3
     	  l3=m4
     	  m4=tmp2
       }
-      if(j1<m4){
+      if(j1>m4){
     	  tmp2=j1
     	  j1=m4
     	  m4=k2
     	  k2=tmp2
       }
-      if(k2<l3){
+      if(k2>l3){
     	  tmp2=k2
     	  k2=l3
     	  l3=m4
     	  m4=tmp2
       }
-      if(l3<m4){
+      if(l3>m4){
     	  tmp2=l3
     	  l3=m4
     	  m4=j1
@@ -128,7 +130,7 @@
      }else {
       alert('재시험')
      }
-    */
+    
      
      //문제8
      const 아이디 = prompt('아이디 : ')
