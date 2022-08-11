@@ -1,0 +1,96 @@
+@charset "UTF-8";
+*{padding: 0 ; margin: o; font-family: 굴림;}
+a{text-decoration: none; color:black;}
+a:hover {color: orange;}
+li{list-style-type: none;}
+
+
+#header {width: 1200px; height: 150px; margin: 0 auto;}
+.logobox{float: left; margin: 50px 0 0 30px;}
+.menus{float:right; text-align: right;}
+.menus li{display: inline;}
+.topmenu{margin: 30px 0px;}
+.topmenu a{margin-left: 30px;}
+.mainmenu li a{font-family: 궁서;
+			 font-size: 20px;
+			 margin-left: 60px;
+			 font-weight: bold;
+}
+
+
+.img_main{clear: both;
+		  background-image:url("img/main_bg.png");
+		  height: 350px;
+		  background-repeat: no-repeat;
+		  background-position: top center;}
+
+
+#contents{width: 1250px; margin: 0 auto;}
+.content_1{width: 250px; margin : 0 auto;
+ float: left;}
+    	  
+h2{background-color: #0ca9a3;
+   width:250px;
+   padding:10px;
+   font-size: 20px;
+   color: white;}
+   
+p{width: 250px; padding: 15px; line-height: 150%;}
+.con_in {width: 250px; padding: 15px;}
+.con_in input{width: 150px; height: 30px;}
+.con_in button{width: 55px; height: 32px; margin-left: 5px;
+			   padding: 8px 10px;}
+
+
+
+h3{width: 250px; 
+   border-top: solid 2px black; 
+   border-bottom: solid 1px #eeeeee;
+   padding: 15px;}
+   
+.con_bak li {padding: 10px; }
+.con_bak {padding: 15px;}
+
+
+
+.main_content{float: left; width: 440px; margin: 0px 20px 20px 40px;}
+.main_left{float: left; width: 440px; margin-bottom: 30px;}
+.main_title{float: right; width: 440px;}
+h4{border-bottom: solid 2px black; padding-bottom: 8px;}
+.board ul {margin: 30px 0px;}
+.item{height: 30px; padding-bottom: 10px;}
+.item .title {float: left;}
+.item .date{float: right;}
+
+.content_3{float: right; width: 440px;}
+.content_3 .maintitle {border-bottom: solid 2px black; padding-bottom: 8px;}
+.content_3 .prod_ul {float: left; width: 200px; margin: 20px 0 0 10px;}
+
+
+
+
+#footer{clear: both; background-color:#05354e; height: 300px;
+		color:white;}
+.ftbox{margin: 0 auto; width: 1200px; padding: 50px;}
+
+.ftmenu{display: block; font-weight: bold;}
+.ftmenu li{display: inline; margin-left: 50px ; margin-right: 50px;}
+
+.items {float: left; margin: 10px 80px 80px 80px;}
+.ft_title{font-weight: bold;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
