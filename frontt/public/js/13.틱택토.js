@@ -71,11 +71,9 @@ function 게임판그리기(){
 			승리 = 게임상황[i]
 			return true
 		}
-	}	
-	
-	
+	}   
 }
- 
+
  
  
  

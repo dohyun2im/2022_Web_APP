@@ -1,0 +1,12 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0; box-sizing: border-box;
+  border: solid 1px red;}
+li{list-style-type: none;}
+
+.box{
+	clear: both;
+	width: 70%;
+	height: 50%;
+	margin: 0 auto;
+	background-color: #eeeeee;
+}
