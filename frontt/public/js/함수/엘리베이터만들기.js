@@ -1,16 +1,42 @@
 
-let F1F = document.querySelector('.elevator').style.cssText  = 'top:680px';
-let F2F = document.querySelector('.elevator').style.cssText  = 'top:560px';
-let F3F = document.querySelector('.elevator').style.cssText  = 'top:450px';
-let F4F = document.querySelector('.elevator').style.cssText  = 'top:340px';
-let F5F = document.querySelector('.elevator').style.cssText  = 'top:230px';
-let F6F = document.querySelector('.elevator').style.cssText  = 'top:120px';
-let F7F = document.querySelector('.elevator').style.cssText  = 'top:10px';
-
-function 층이동(){
-	for(let i = 1 ; i<=7 ; i++){
-		
-	}
+function 층이동1(){
+	document.querySelector('.elevator').style.cssText  = 'top:680px';
+	document.querySelector('.peaple').style.cssText  = 'top:680px';
+	document.getElementById('floorcon').innerHTML = '1층';
 }
 
+function 층이동2(){
+	document.querySelector('.elevator').style.cssText  = 'top:560px';
+	document.querySelector('.peaple').style.cssText  = 'top:560px';
+	document.getElementById('floorcon').innerHTML = '2층';
+}
 
+function 층이동3(){
+	document.querySelector('.elevator').style.cssText  = 'top:450px';
+	document.querySelector('.peaple').style.cssText  = 'top:450px';
+	document.getElementById('floorcon').innerHTML = '3층';
+}
+
+function 층이동4(){
+	document.querySelector('.elevator').style.cssText  = 'top:340px';
+	document.querySelector('.peaple').style.cssText  = 'top:340px';
+	document.getElementById('floorcon').innerHTML = '4층';
+}
+
+function 층이동5(){
+	document.querySelector('.elevator').style.cssText  = 'top:230px';
+	document.querySelector('.peaple').style.cssText  = 'top:230px';
+	document.getElementById('floorcon').innerHTML = '5층';
+}
+
+function 층이동6(){
+	document.querySelector('.elevator').style.cssText  = 'top:120px';
+	document.querySelector('.peaple').style.cssText  = 'top:120px';
+	document.getElementById('floorcon').innerHTML = '6층';
+}
+
+function 층이동7(){
+	document.querySelector('.elevator').style.cssText  = 'top:10px';
+	document.querySelector('.peaple').style.cssText  = 'top:10px';
+	document.getElementById('floorcon').innerHTML = '7층';
+}
