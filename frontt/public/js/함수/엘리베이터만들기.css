@@ -27,7 +27,7 @@ body{
 .elevator {
  width: 300px;
  height: 100px;
- margin: -10px 10px 10px 10px;
+ margin: 0px 10px 10px 10px;
  background-color: skyblue;
  position: absolute;
  padding-left: 10px;
@@ -35,11 +35,34 @@ body{
  font-weight:bold;
  cursor: default;
 }
-#f1 , .elevator{display: inline-block;}
-.elevator{position:absolute;
-		  top:690px; left:320px;}
-		  
-.buttons{width: 100px;
+.peaple{
+ width: 300px;
+ height: 100px;
+ margin: 0px 10px 10px 10px;
+ background-color: black;
+ position: absolute;
+ padding-left: 10px;
+ font-size:2em;
+ font-weight:bold;
+ cursor: default;
+
+}
+#f1 , .elevator , .peaple{display: inline-block;}
+.elevator {position:absolute;
+		  top:680px; left:320px;}
+		  /* 
+		  1층 680
+		  2층 560
+		  3층 450
+		  4층 340
+		  5층 230
+		  6층 120
+		  7층 10
+		  */
+.peaple{position:absolute;
+		  top:680px; left:660px;}	
+		  	  
+.buttons{width: 400px;
  margin: 10px;
  background-color:skyblue;
  position: absolute;
@@ -49,7 +72,8 @@ body{
  text-align: center;}
  
  .buttons button{display:block; 
- 				 width:80px;
+ 				 width:200px;
+ 				 height:50px;
  				 margin: 0 auto;
  				 font-size:15px;}
  

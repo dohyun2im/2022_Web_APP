@@ -1,0 +1,120 @@
+@charset "UTF-8";
+a{color: black; text-decoration: none;}
+*:focus{outline: none;}
+body{background-color:#f5f6f7;}
+
+.nav{height: 50px; margin-top: 40px; padding: 20px;}
+
+.main_signup{
+	width: 460px;
+	margin: 0 auto;
+	text-align: center;
+}
+h3{text-align: left;
+   font-size: 14px;
+   font-family: '돋움';}
+   
+#signup_id , #signup_pw , #signup_rpw{
+	height: 30px;
+	border: none;
+	width: 100%;	
+}
+
+.signup_input{display: flex; 
+			  padding: 10px;
+			  border: solid 1px #dadada;
+			  background-color: white;
+}
+.signup_at{font-size: 15px;
+		   color:#8e8e8e;
+		   margin-top: 4px;}
+
+.signup_lock , .signup_lock2{
+	width: 24px;
+	height: 24px;
+	background-image: 
+	url("https://static.nid.naver.com/images/ui/join/m_icon_pw_step.png");
+	background-size: 125px 75px;
+	margin-top: 2px;
+	top: 50%;
+	right: 10px;
+}
+
+#signup_name , #signup_gender , #signup_email , #signup_con , #signup_phone , #signup_number
+{width: 100%; height: 30px; border: none;}
+
+.birthbox{display: flex;}
+
+.birth{width: 100% ;
+	   
+	   height: 50px;
+	   background-color: #ffffff;
+	   box-sizing: border-box;
+	   padding: 10px;
+	   border: solid 1px #dadada;
+	   margin: 4px;
+}
+
+#birth_yy , #birth_dd , #birth_mm { width: 120px; height: 30px; border: none;}
+.choice{display: flex;}
+.choice span{font-size: 12px; 
+			 font-family: '돋움';
+			 margin-top: 16px;
+			 color: #8e8e8e;
+}
+
+
+.phoneinput{width: 100%;}
+.signup_phonebox{display: flex; margin: 10px 0px;}
+.signup_bth{
+		height: 52px;
+		background-color: #03c75a;
+		margin: 2px 0 0 10px;
+		line-height: 50px;
+}
+#num_bth{width: 110px; 
+		 background-color: #03c75a;
+		 border:none; color:#ffffff;
+		 font-size: 15px;
+}
+
+.signup_bth_wrap{
+	height: 52px;
+	background-color: #03c75a;
+	line-height: 50px;
+	margin: 20px 0 30px 0;
+
+}
+#signup_bth{
+	width: 100%;
+	background-color: #03c75a;
+	border: none;
+	color:#ffffff;
+	font-size: 18px;
+	font-weight: bold;
+}
+#disabledbox{background-color: #fafafa}
+
+
+
+
+.ftbox{
+	font-size: 10px;
+}
+
+a:hover{
+	color: #03c75a;
+}
+.nav1{width:50px;}
+
+
+
+
+
+
+
+
+
+
+
+

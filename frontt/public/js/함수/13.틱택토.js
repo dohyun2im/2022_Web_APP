@@ -1,4 +1,6 @@
-
+/**
+ * 
+ */
 
 let 게임상황 = [] //현재 알을 둔 상황을 저장 배열
 let 승리 = '' // 이긴 알의 변수
@@ -71,13 +73,14 @@ function 게임판그리기(){
 			승리 = 게임상황[i]
 			return true
 		}
-	}   
-}
-
- 
- 
- 
- 
- 
- 
- 
+	}
+	let  oxCount = 0;
+    for (let i = 0; i <= 8; i++) {
+        if(게임상황[i] != null) {
+        oxCount++;
+        }
+        if(oxCount > 7 ) {
+        alert('게임 무승부')
+        }
+    }
+} 
