@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+.container{
+	overflow: auto;
+	scroll-snap-type: y mandatory;
+	height: 100vh;
+}
+
+section{
+	scroll-snap-align: start;
+	height: 101vh;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.hero{
+	background-image: url("chapter2image/빵.jpg");
+	text-align: center;
+	padding-top: 10vh;
+}
+
+.menu{
+	display:flex;
+	align-items:center;
+	background-image: url("chapter2image/메론빵.jpg");
+	padding-top: 10vh;
+}
+.wrapper{
+	width:900px;
+	margin: 0 auto;}
+
+.menulist tr{margin-bottom: 30px; line-height: 2;}
+.menulist th{margin: 30px;}
+
+
+.contact{
+	background-image: url("chapter2image/빵빵.jpg");
+	text-align: center;
+	padding-top: 10vh;
+}
+.logo{margin-top: 350px;}
+
+
+
+
+
+.fa-twitter{color: black;}
+
+
+p , a{font-family: 'Caveat', cursive;}
+
+.title{font-size: 7rem; margin-bottom: 2rem; 
+	   font-family: 'Caveat', cursive;}
+
+
+@media (max-width:700px) {
+	.title{
+	font-size:4rem;
+	color:blue;
+	}
+}

@@ -1,0 +1,75 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.container{
+	overflow: auto;
+	scroll-snap-type: y mandatory;
+	height: 100vh;
+	font-family: 'GmarketSansMedium';
+}
+
+section{
+	scroll-snap-align: start;
+	height: 101vh;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.one{
+	background-image: url("chapter2image/gyul2.jpg");
+	text-align: center;
+	padding-top: 10vh;
+}
+
+.two{
+	background-image: url("chapter2image/gyul3.jpg");
+	text-align: center;
+	padding-top: 10vh;
+}
+
+.three{
+	background-image: url("chapter2image/gyul4.png");
+	text-align: center;
+	padding-top: 10vh;
+}
+.fa-star , #red{color: red;}
+.title{font-size: 7rem; 
+	   margin-bottom: 2rem; 
+	   color:white;
+	   font-weight: bold;
+}
+.sub{font-size: 3rem; 
+	   margin:110px;
+	   color:white;
+}
+.moovie{font-size: 7rem; 
+	   color:#b5a791;
+	   margin-top:100px;
+	   font-weight: bold;
+}
+.eng{font-size: 2rem; 
+	   color:#b5a791;
+}
+
+.na1{margin-top : 760px;}
+
+.na{font-size: 2rem; 
+	   color:white;
+	font-weight: bold;
+}
+.cgv{font-size: 2rem; 	
+	 margin:25px;	
+	   color:black;
+}
+.logo{
+	width:700px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+	}

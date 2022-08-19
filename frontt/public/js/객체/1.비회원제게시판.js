@@ -66,6 +66,12 @@ function 게시물보기(i){
 
 
 
+ function deleteDiv() {
+  const div = document.getElementById('delete');
+  
+  div.remove();
+} 
+
 
 
 

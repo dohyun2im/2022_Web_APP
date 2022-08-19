@@ -1,0 +1,18 @@
+@charset "UTF-8";
+.container{
+	overflow: auto;
+	scroll-snap-type: y mandatory;
+	height: 100vh;
+}
+
+.area{
+	scroll-snap-align:start; /*자식요소 center end*/
+	height: 85vh;
+}
+
+.area:nth-child(1){background-color: red;}
+.area:nth-child(2){background-color: black;}
+.area:nth-child(3){background-color: blue; scroll-snap-align:center;}
+.area:nth-child(4){background-color: purple;}
+.area:nth-child(5){background-color: orange; scroll-snap-align:end;}
+
