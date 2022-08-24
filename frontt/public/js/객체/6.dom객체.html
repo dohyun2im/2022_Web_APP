@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+			document.addEventListener('DOMContetloaded',()=>{
+			const h1 = (text) => `<h1>${text}</h1>`
+			document.body.innerHTML += h1('loaded 이벤트 발생')
+		    })
+		    
+		    document.onload = function(){
+				document.innerHTML += 'load 이벤트 발생'
+			}
+			
+			document.addEventListener('load' ,function(){
+				document.innerHTML += 'load 이벤트 발생'
+			})
+	</script>
+</head>
+<body> 
+
+	<script type="text/javascript">
+	document.innerHTML += 'body 하단에 작성'
+	</script>
+
+</body>
+</html>

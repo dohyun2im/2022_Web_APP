@@ -1,0 +1,94 @@
+@charset "UTF-8";
+a{text-decoration: none;}
+input:focus {outline:none;}
+.all {
+	width: 360px;
+	margin: 0 auto;
+}
+.header , .main , .footer{
+	width:360px;
+	margin: 0 auto;
+}
+.coupang{
+	font-weight: 900;
+	font-size: 2.5rem;
+	text-align: center;
+	margin: 1rem 0 1rem 0;
+		
+}
+.cou{color: #935227;}
+.p{color: #fa8469;}
+.a{color:#ffc400;}
+.n{color:#88cc2f;}
+.g{color:#31b4dd;}
+
+.email_pw{width: 360px; text-align:center;}
+.email_pw div{
+	display:flex;
+	width:360px;
+	height:40px;
+	color:#eeeeee;
+	font-weight: bold;
+	border: 2px solid #eeeeee;
+	margin: 5px 0 5px 0;
+	box-sizing: border-box;
+}
+.email_pw input{
+	border:none;
+	border-left: 2px solid #eeeeee;
+	padding: 5px;
+	font-size: 9px;
+}
+#eye{padding-top: 10px;}
+#email{padding:9px 8px 0 8px;}
+#lock{padding:9px 9px 0 9px;}
+#pw{padding-right: 168px;}
+
+.between{width: 360px; text-align:center; display: flex;
+font-size: 9px;}
+.auto{margin-right: 140px;}
+.check{position: relative; top: 2.5px;}
+
+
+
+.log_join{width: 360px;}
+.login{border-bottom: 1px solid #eeeeee;}
+.logb{
+	box-sizing: border-box;
+	width:360px;
+	height:50px;
+	margin:13px 0 13px 0;
+	background-color: #0074e9; 
+	color: white; 
+	border:2px solid #eeeeee;}
+.joinb{
+	box-sizing: border-box;
+	width:360px;
+	height:50px;
+	margin:13px 0 13px 0;
+	background-color: white; 
+	color: #0074e9; 
+	border:2px solid #eeeeee;}
+	
+.footer{width: 360px; text-align: center; font-size: 8px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
