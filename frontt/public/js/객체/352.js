@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded' , ()=> {
 	const todolist= document.querySelector('#todo_list') //html id값 todo_list를 가져온다
 	const addButton= document.querySelector('#add_button') //html id값 add_button를 가져온다
 	
-	let keycount = 0 // item에 속성값을 주거나 remove할시 사용
+	let keycount = 0 // setAttribute(key, value)는 통해 html 태그에 해당 key로 셋팅해서 value값을 넣어준다.
+					 // item에 키값을 주고 todolist에 넣고 html에 넣거나 remove할시 사용
 	
 	const addTodo = () =>{ // 첫 입력창에 넣을 함수
 		if(input.value.trim()===''){ //input 값의 trim(문자열공백)과 ''같으면

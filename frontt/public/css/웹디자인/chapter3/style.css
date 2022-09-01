@@ -192,6 +192,21 @@ article blockquote::after{
 }
 
 
+footer{
+	background: #949087;
+	text-align: center;
+	padding: 3rem;
+}
+footer ul{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+footer li{margin: 0 12px;}
+footer a{color: #fff;}
+footer a:hover{color: #c7c3ba;}
+footer small{color:#c7c3ba; font-size: .875rem;}
+
 
 
 
@@ -215,7 +230,10 @@ article blockquote::after{
 		float:left;
 		margin: 0 3rem 1rem 0;
 	}
-
+	.popular-posts{
+		position: sticky;
+		top:1rem;
+	}
 
 
 

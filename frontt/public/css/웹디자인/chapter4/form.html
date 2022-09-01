@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+<title>Insert title here</title>
+	<link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+	<script src="https://kit.fontawesome.com/b8a7fea4d4.js"></script>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body class="form_page">
+	<header>
+		<div class="wrapper headlogo">
+			<h1>
+				<a href="index.html"><img class="logo" src="img/logo.svg"></a>
+			</h1>
+			<nav>
+				<ul class="main_nav">
+					<li><a class="menu_home" href="index.html">홈</a></li>
+					<li><a class="menu_job"  href="job.html">모집요강</a></li>
+					<li><a class="current menu_form" href="form.html">지원</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<section class="main1">
+		<h2 class="title text_center">지원 폼</h2>
+		<p>하기 지원 폼에 모든 정보를 입력한 뒤 전송버튼을 눌러주세요.<br> ※파일 첨부는 불가능합니다. 포트폴리오 파일이 있는 경우 반드시 업로드한 URL을 기입하기 바랍니다.</p>
+		<table>
+			<tr><th>성명</th><td><input id="name1" type="text" placeholder="홍길동"></td></tr>
+			<tr><th>영문명</th><td><input id="engname1" type="text" placeholder="HongGilDong"></td></tr>
+			<tr><th>메일주소</th><td><input id="email1" type="email" placeholder="예:hi@naver.com"></td></tr>
+			<tr><th>포트폴리오</th><td><input id="popol1" type="url" placeholder="http://naver.com"></td></tr>
+			<tr>
+				<th>희망 근무지</th>
+				<td>
+					<label>
+					<input id="chkbox" type="checkbox" value="도쿄"><span>도쿄</span>
+					</label>
+					<label>
+					<input id="chkbox" type="checkbox" value="오사카"><span>오사카</span>
+					</label>
+					<label>
+					<input id="chkbox" type="checkbox" value="원격근무"><span>원격근무</span>
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<th>현재 상태</th>
+				<td>
+					<div class="select_box">
+						<select id="select1" name="current_position">
+							<option value="재직중">재직중</option>
+							<option value="프리랜서">프리랜서</option>
+							<option value="학생">학생</option>
+							<option value="휴직중">휴직중</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>자기소개<br>1000자 이내</th><td><textarea id="textarea" placeholder="본인 소개" cols="70" rows="20"></textarea></td>
+			</tr>
+		</table>
+			<p class="text_center">
+				<input onclick="table()" type="submit" value="전송" class="btn btn_primary">
+			</p>
+	</section>
+	
+	<section>
+		<h2 class="title text_center">지원자 목록</h2>
+		<table id="listtable">
+			<tr> 
+			<th>성명</th> 
+			<th>영문명</th> 
+			<th>메일 주소</th> 
+			<th>포트폴리오</th>
+			<th>현재 상태</th>
+			</tr>
+		</table>
+	</section>
+	
+	
+	
+	
+	<footer>
+	<div class="btn_bck"><a class="btn btn_secondary" href="#">모집요강 확인</a></div>
+	
+	<div>
+		<ul class="ft_menu">
+			<li><a href="#">회사개요</a></li>
+			<li><a href="#">서비스 내용</a></li>
+			<li><a href="#">스태프 블로그</a></li>
+			<li><a href="#">문의사항</a></li>
+		</ul>
+	</div>
+	</footer>
+	
+	<script src="script.js"></script>
+</body>
+</html>
