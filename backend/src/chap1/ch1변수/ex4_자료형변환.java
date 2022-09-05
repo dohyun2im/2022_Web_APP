@@ -1,4 +1,4 @@
-package chap1.a변수;
+package chap1.ch1변수;
 
 public class ex4_자료형변환 {
 	public static void main(String[] args) {

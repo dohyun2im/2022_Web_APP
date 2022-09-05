@@ -81,8 +81,8 @@ function 게임판그리기(){
 			}
 		}
 	}
-	for(let c = 0 ; c<=8; c++){
-		for(let a = 1 ; a<=501 ; a+=100){
+	for(let c = 1 ; c<=9; c++){ //세로
+		for(let a = 0 ; a<=400 ; a+=100){
 			let i =c+a
 			if(게임상황[i] !=null && 
 			게임상황[i]== 게임상황[i+100] && 

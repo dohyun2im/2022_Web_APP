@@ -1,4 +1,4 @@
-package chap1.a변수;
+package chap1.ch1변수;
 
 import java.util.Scanner;
 
