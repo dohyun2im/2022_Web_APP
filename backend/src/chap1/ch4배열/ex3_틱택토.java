@@ -10,6 +10,7 @@ public class ex3_틱택토 {
 		//게임판 생성
 		String[] 게임판 = {"[ ]", "[ ]", "[ ]", "[ ]", "[ ]", "[ ]", "[ ]", "[ ]", "[ ]"};
 		boolean win = true;
+		int count = 0 ;
 		
 		while(win) {
 			System.err.println("위치선택 하세요 ! \n");
@@ -47,22 +48,33 @@ public class ex3_틱택토 {
 				}
 			}
 			
-			for(int i = 0 ; i<=2 ; i+=2) { //대각 048 246
-				if((!게임판[i].equals("[ ]")) && 게임판[i].equals(게임판[i+4]) && 게임판[i+4].equals(게임판[i+8]) ||
-				   (!게임판[i].equals("[ ]")) && 게임판[i].equals(게임판[i+2]) && 게임판[i+2].equals(게임판[i+4])) {
-					System.out.println(게임판[i]+"승리");
-					win = false;
+			if(!게임판[0].equals("[ ]")) { //대각선 048
+				if(게임판[0].equals(게임판[4])) {
+					if(게임판[4].equals(게임판[8])) {
+						System.out.println(게임판[0]+"승리");
+						win = false;
+					}
 				}
 			}
 			
+			if(!게임판[2].equals("[ ]")) { //대각선 246
+				if(게임판[2].equals(게임판[4])) {
+					if(게임판[4].equals(게임판[6])) {
+						System.out.println(게임판[2]+"승리");
+						win = false;
+					}
+				}
+			}
 			
-		}
-		
-		
-		
-		
-		
-		
+			count++;
+			if(count==4) {
+				System.out.println("무승부");
+				win = false;
+			}
+			
+
+			
+		}		
 	}
 }
 
