@@ -1,6 +1,6 @@
 package chap1.ch4배열;
 
-import java.util.Random;
+import java.util.*;
 import java.util.Scanner;
 
 public class ex3_틱택토 {
@@ -18,6 +18,7 @@ public class ex3_틱택토 {
 				System.out.printf(게임판[i]);
 				if(i%3==2) {System.out.println();}
 			}
+			
 
 			while(true) {
 				int 사용자 = sc.nextInt();
@@ -26,7 +27,7 @@ public class ex3_틱택토 {
 				else{System.out.println("이미 선택된 번호입니다.");}
 			}
 			
-			
+
 			while(true) {
 				Random 컴퓨터 = new Random();
 				int 랜덤 = 컴퓨터.nextInt(9);
@@ -73,6 +74,13 @@ public class ex3_틱택토 {
 			}
 			
 
+		
+			
+			
+			
+			
+			
+			
 			
 		}		
 	}
