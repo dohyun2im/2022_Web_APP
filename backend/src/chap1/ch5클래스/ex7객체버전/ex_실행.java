@@ -1,4 +1,4 @@
-package chap1.ch5클래스.ex7;
+package chap1.ch5클래스.ex7객체버전;
 
 import java.util.Scanner;
 
