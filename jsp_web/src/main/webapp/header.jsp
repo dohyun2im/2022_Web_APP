@@ -30,6 +30,7 @@
 			<%}%>	
 				<li><a href="/jsp_web/member/info.jsp">마이쇼핑</a></li>
 				<li><a href="/jsp_web/board/boardlist.jsp">게시판</a></li>
+				<li><a href="/jsp_web/board/chatting.jsp">채팅</a></li>
 			</ul>
 		</div>
 		<ul class="head_menu">

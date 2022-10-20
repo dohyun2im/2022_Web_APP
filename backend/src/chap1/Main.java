@@ -1,35 +1,46 @@
 package chap1;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.HashMap;
 import java.util.StringTokenizer;
 import java.io.IOException;
 
 public class Main {
-	public static void main(String[] args) throws IOException {  
-		int[] arr = new int [10001];
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));	
+	
+	public static void main(String args[]) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int n = Integer.parseInt(st.nextToken());
+		int m = Integer.parseInt(st.nextToken());
 		
-		int index = 1;
-		int result = Integer.parseInt(br.readLine());
-		
-		for(int i=666; i<2666800; i++) {
-			String X = String.valueOf(i);
-			for(int j=0; j<X.length()-2 ;j++) {
-				if(X.charAt(j)=='6'&&
-				   X.charAt(j)==X.charAt(j+1)&& 
-				   X.charAt(j+1)==X.charAt(j+2)) {
-					if(arr[index-1]!=Integer.parseInt(X)) {
-						arr[index]=Integer.parseInt(X);
-						if(index==result) {
-							System.out.println(arr[index]);
-						}
-						index++;
-					}
-					
-				}
-			}
+		HashMap<String, Integer> nameMap = new HashMap<String, Integer>();
+		String[] nameArr = new String[n + 1];
+		StringBuilder sb = new StringBuilder();
+
+		for(int i = 1; i <=n; i++) {
+			String name = br.readLine();
+			nameMap.put(name, i);
+			nameArr[i] = name;
 		}
+		
+		for(int i=1; i<=m; i++) {
+			String findStr = br.readLine();
+			
+			if(findStr.charAt(0)<=64) { 
+				int index = Integer.parseInt(findStr);
+				sb.append(nameArr[index]);
+			}
+			
+			else {
+				sb.append(nameMap.get(findStr));
+			}
+			sb.append("\n");
+		}
+		
+		System.out.println(sb.toString());
 	}
 }
 
