@@ -2,6 +2,9 @@ package model.dao;
 
 import java.util.ArrayList;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
 import model.dto.boardDto;
 
 public class boardDao extends Dao{
@@ -153,6 +156,33 @@ public class boardDao extends Dao{
 		return 0;
 	}
 	
+	public JSONArray getapi() {
+		JSONArray array = new JSONArray();
+		String sql ="select * from 아파트매매실거래가 where 시군구 like '%강남%';";
+		try {
+			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				JSONObject object = new JSONObject();
+				object.put("시군구", rs.getString(1));
+				object.put("번지본번부번", rs.getString(2) +"/"+ rs.getInt(3)+"/"+rs.getInt(4));
+				object.put("단지명", rs.getString(5));
+				object.put("전용면적", rs.getDouble(6));
+				object.put("계약년월", rs.getInt(7));
+				object.put("계약일", rs.getInt(8));
+				object.put("거래금액", rs.getString(9));
+				object.put("층", rs.getInt(10));
+				object.put("건축년도", rs.getInt(11));
+				object.put("도로명", rs.getString(12));
+				object.put("해제사유발생", rs.getString(13));
+				object.put("거래유형", rs.getString(14));
+				object.put("중개사", rs.getString(15));
+				array.add(object);
+			}
+		} 
+		catch (Exception e) {System.out.println(e);}
+		return array;
+	}
 	
 	
 	
