@@ -18,7 +18,7 @@ import org.json.simple.JSONObject;
 public class chatting{
 	//클라이언트소켓 명단  
 	public static Hashtable<Session , String> clients = new Hashtable<>();
-	//알람보내기
+	//알람보내기 
 	public void sendAlarm(String content) throws IOException {
 		JSONObject object = new JSONObject();
 		object.put("type", "alarm");
