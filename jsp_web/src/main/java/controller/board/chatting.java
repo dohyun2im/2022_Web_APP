@@ -16,7 +16,7 @@ import org.json.simple.JSONObject;
 //@WebServlet("/chatting")
 @ServerEndpoint("/chatting/{mid}")
 public class chatting{
-	//클라이언트소켓 명단
+	//클라이언트소켓 명단 
 	public static Hashtable<Session , String> clients = new Hashtable<>();
 	//알람보내기
 	public void sendAlarm(String content) throws IOException {
