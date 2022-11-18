@@ -9,7 +9,7 @@ public class commentDao extends Dao{
 	public static commentDao getInstance() {return cdao;}
 	//댓글작성
 	public boolean comment(int mnum , int bnum , String comment) {
-		String sql = "insert into comments(mnum,bnum,bcon) values(?,?,?);";
+		String sql = "insert into comments(mno,bno,bcon) values(?,?,?);";
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setInt(1, mnum);
@@ -22,7 +22,7 @@ public class commentDao extends Dao{
 	}
 	//대댓글작성
 		public boolean cocomment(int mnum , int bnum , String comment,int cindex) {
-			String sql = "insert into comments(mnum,bnum,bcon,cindex) values(?,?,?,?);";
+			String sql = "insert into comments(mno,bno,bcon,cindex) values(?,?,?,?);";
 			try {
 				ps = con.prepareStatement(sql);
 				ps.setInt(1, mnum);
@@ -40,7 +40,7 @@ public class commentDao extends Dao{
 	//댓글가져오기
 	public ArrayList<commentDto> comlist(int bnum) {
 		ArrayList<commentDto> list = new ArrayList<>();
-		String sql = "select c.*,m.mid from comments c,member m where m.mnum=c.mnum and bnum=? and cindex=0 order by c.bdate desc;";
+		String sql = "select c.*,m.mid from comments c,member m where m.mno=c.mno and bno=? and cindex=0 order by c.bdate desc;";
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setInt(1, bnum);
@@ -48,9 +48,9 @@ public class commentDao extends Dao{
 			while(rs.next()) {
 				commentDto dto = new commentDto(
 						rs.getString(7),
-						rs.getString(5), 
-						rs.getString(6),
-						rs.getInt(4));
+						rs.getString(2), 
+						rs.getString(3),
+						rs.getInt(1));
 				list.add(dto);
 			}
 			return list;
@@ -62,7 +62,7 @@ public class commentDao extends Dao{
 	//대댓글가져오기
 	public ArrayList<commentDto> comcomlist(int bnum,int cindex) {
 		ArrayList<commentDto> list = new ArrayList<>();
-		String sql = "select c.*,m.mid from comments c,member m where m.mnum=c.mnum and bnum=? and cindex=? order by c.bdate desc;";
+		String sql = "select c.*,m.mid from comments c,member m where m.mno=c.mno and bno=? and cindex=? order by c.bdate desc;";
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setInt(1, bnum);
@@ -71,9 +71,9 @@ public class commentDao extends Dao{
 			while(rs.next()) {
 				commentDto dto = new commentDto(
 						rs.getString(7),
-						rs.getString(5), 
-						rs.getString(6),
-						rs.getInt(4));
+						rs.getString(2), 
+						rs.getString(3),
+						rs.getInt(1));
 				list.add(dto);
 			}
 			return list;

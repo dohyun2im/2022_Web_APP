@@ -43,8 +43,6 @@ public class signup extends HttpServlet {
 		System.out.println(dto.toString());
 		boolean result = memberDao.getInstance().signup(dto);		
 		if(result){response.sendRedirect("/jsp_web/member/login.jsp");}
-		
-		doGet(request, response);
 	}
 
 }

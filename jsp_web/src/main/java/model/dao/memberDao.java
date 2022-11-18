@@ -179,7 +179,7 @@ public class memberDao extends Dao{
 	}
 	
 	public int getMnum( String mid) {
-		String sql = "select mnum from member where mid = ?;";
+		String sql = "select mno from member where mid = ?;";
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString( 1 , mid );

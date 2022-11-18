@@ -1,6 +1,7 @@
 package controller.board;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Vector;
 
@@ -12,6 +13,9 @@ import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 
 import org.json.simple.JSONObject;
+
+import model.dao.memberDao;
+import model.dto.memberDto;
 
 //@WebServlet("/chatting")
 @ServerEndpoint("/chatting/{mid}")

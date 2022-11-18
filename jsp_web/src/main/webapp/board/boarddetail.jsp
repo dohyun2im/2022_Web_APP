@@ -11,7 +11,7 @@
 </head>
 <body>
 	<%@include file="../header.jsp" %>
-	<%if(loginid==null){response.sendRedirect("../member/login.jsp");}%>
+	<%if(loginid==null){response.sendRedirect("/jsp_web/member/login.jsp");}%>
 
 	<div class="webbox">
 		<h3> 글 조회 </h3>

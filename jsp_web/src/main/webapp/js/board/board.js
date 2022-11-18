@@ -82,18 +82,18 @@ function boardlist(page){
 				let to = new Date();   
 				let date = to.getFullYear()+'-'+(to.getMonth()+1)+'-'+to.getDate();
 				let today = '';
-				if(b.bdate.substr(0,10)===date){
+			    /*if(b.bdate!==null && b.bdate.substr(0,10)===date){
 					today=b.bdate.substr(11,18);
 				}
 				else{
 					today=b.bdate.substr(0,10);
-				}
+				}*/
 				
 				tag +='<tr>'+
 					'<td>'+b.mid+'</td>'+
 					'<td>'+b.bnum+'</td>'+
 					'<td onclick="viewupdate('+b.bnum+')">'+b.btitle+'</td>'+
-					'<td>'+today+'</td>'+
+					'<td>'+b.bdate+'</td>'+
 					'<td>'+'&nbsp&nbsp'+b.bview+'</td>'+
 					'</tr>';
 			}
@@ -103,7 +103,7 @@ function boardlist(page){
 			if(page===1){pagehtml+='<button type="button" onclick="boardlist('+page+')">이전</button>'}
 			else{pagehtml+='<button type="button" onclick="boardlist('+(page-1)+')">이전</button>'}
 			
-			if(page<3){
+			if(page<=3){
 				for(let i=1; i<=5; i++){
 					pagehtml+='<button type="button" onclick="boardlist('+i+')">'+i+'</button>'
 				}
@@ -132,7 +132,7 @@ function viewupdate(bnum){
 		url :"/jsp_web/board/viewupdate", 
 		data : {"bno" : bnum} ,
 		success : function(result){
-			location.href="http://localhost:8080/jsp_web/board/boarddetail.jsp"
+			location.href="/jsp_web/board/boarddetail.jsp"
 		}
 	})	
 }

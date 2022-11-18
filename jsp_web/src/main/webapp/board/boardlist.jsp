@@ -9,7 +9,7 @@
 </head>
 <body>
 	<%@include file="../header.jsp" %>
-	<%if(loginid==null){response.sendRedirect("../member/login.jsp");}%>
+	<%if(loginid==null){response.sendRedirect("/jsp_web/member/login.jsp");}%>
 	<div class="webbox">
 		<div class="box">
 			<h1>게시물 목록 </h1>

@@ -7,7 +7,6 @@ function bdetail(){
 	$.ajax({
 		url :"/jsp_web/board/view", 
 		success : function(result){
-			if(result==='true'){alert('성공')}
 			let b = JSON.parse(result)
 			let table = document.querySelector("#detailbox")
 			let filelink = '<a href="../board/filedown?bfile='+b.bfile+'">'+b.bfile+'</a>';
@@ -96,13 +95,14 @@ function comlist(){
 						let commentlist = JSON.parse(result);
 						for(let i=0; i<commentlist.length ; i++){
 						let c = commentlist[i]
-				
-						tag+='<tr>'+
-							'<td>└──답글 : '+c.mid+'</td>'+
-							'<td>'+c.cnum+'</td>'+
-							'<td>'+c.com+'</td>'+
-							'<td>'+c.cdate+'</td>'+
-							'</tr>';
+						if(c.cnum>0){
+							tag+='<tr>'+
+								'<td>└──답글 : '+c.mid+'</td>'+
+								'<td>'+c.cnum+'</td>'+
+								'<td>'+c.com+'</td>'+
+								'<td>'+c.cdate+'</td>'+
+								'</tr>';
+							}
 						}
 					}
 				})

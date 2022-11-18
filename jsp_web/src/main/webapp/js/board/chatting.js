@@ -7,10 +7,9 @@ function enterkey(){
 
 //js웹소켓 클래스
 let mid = document.querySelector('.mid').value;
-let type = 132;
 let websocket = null;
 if(mid!==null){
-	websocket = new WebSocket('ws://localhost:8081/jsp_web/chatting/'+mid);
+	websocket = new WebSocket('ws://192.168.17.14:8080/jsp_web/chatting/'+mid);
 	//메소드를 클라이언트에 대입한다.
 	websocket.onopen = function(e){onopen(e)}
 	websocket.onclose = function(e){onclose(e)}

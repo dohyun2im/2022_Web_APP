@@ -10,8 +10,7 @@
 <body>
 	<%@include file="../header.jsp" %>
 	<input type="hidden" class='mid' value=<%=loginid%>>
-	<%if(loginid==null){response.sendRedirect("../member/login.jsp");}%>
-
+	<%if(loginid==null){response.sendRedirect("/jsp_web/member/login.jsp");}%>
 	<div class="container">
 		<div class="col-sm-6 offset-3 chattingbox">
 			<div class='row'>

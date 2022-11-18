@@ -12,7 +12,7 @@ public class boardDao extends Dao{
 	public static boardDao getInstance() {return bdao;}
 	
 	public boolean board(String title , String cont , int mnum) {
-		String sql = "insert into board(btitle,bcon,mnum) values(?,?,?);";
+		String sql = "insert into board(btitle,bcon,mno) values(?,?,?);";
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, title);
@@ -26,7 +26,7 @@ public class boardDao extends Dao{
 	}
 	
 	public boolean board2(String title , String cont , int mnum , String bfile) {
-		String sql = "insert into board(btitle,bcon,mnum,bfile) values(?,?,?,?);";
+		String sql = "insert into board(btitle,bcon,mno,bfile) values(?,?,?,?);";
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, title);
@@ -41,7 +41,7 @@ public class boardDao extends Dao{
 	}
 	
 	public boolean bupdate(String title , String cont , int bnum , String bfile) {
-		String sql = "update board set btitle=? , bcon=? ,bfile=? where bnum=?;";
+		String sql = "update board set btitle=? , bcon=? ,bfile=? where bno=?;";
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, title);
@@ -62,10 +62,10 @@ public class boardDao extends Dao{
 		String sql = "";
 		
 		if(!key.equals("") && !keyword.equals("")) {
-			sql= "select b.* , m.mid from member m, board b where m.mnum=b.mnum and "+key+" like '%"+keyword+"%' order by bdate desc limit ?,?;";
+			sql= "select b.* , m.mid from member m, board b where m.mno=b.mno and "+key+" like '%"+keyword+"%' order by bdate desc limit ?,?;";
 		}
 		else {
-			sql = "select b.* , m.mid from member m, board b where m.mnum=b.mnum order by bdate desc limit ?,?;";
+			sql = "select b.* , m.mid from member m, board b where m.mno=b.mno order by bdate desc limit ?,?;";
 		}
 		
 		try {
@@ -94,7 +94,7 @@ public class boardDao extends Dao{
 	}
 	
 	public boolean bdelete(String bnum , int mnum) {
-		String sql = "delete from board where bnum=?;";
+		String sql = "delete from board where bno=?;";
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, bnum);
@@ -108,13 +108,13 @@ public class boardDao extends Dao{
 	
 	public boardDto bdetail(int bnum) {
 		boardDto dto = null ;
-		String sql = "update board set bview = bview+1  where bnum=?;";
+		String sql = "update board set bview = bview+1  where bno=?;";
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setInt(1, bnum);
 			int count = ps.executeUpdate();			
 			if(count==1) {
-				String sql1 = "select b.* , m.mid from member m, board b where m.mnum=b.mnum and bnum=?;";
+				String sql1 = "select b.* , m.mid from member m, board b where m.mno=b.mno and bno=?;";
 				try {
 					ps = con.prepareStatement(sql1);
 					ps.setInt(1, bnum);

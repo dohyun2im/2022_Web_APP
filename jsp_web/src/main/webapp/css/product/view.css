@@ -1,0 +1,79 @@
+img{width: 100%;}
+.infobox{
+	border-top: 1px solid black;
+	margin-left: 3%;
+}
+.pname{
+	margin-top: 5%;
+	font-family: sans-serif;
+}
+.pcon{
+	font-size: 9px;
+}
+.pricebox{
+	margin: 5% 0%;
+}
+.pdiscount{
+	color:red;
+	font-family: sans-serif;
+	font-size: 20px;
+	padding-right: 3%;
+}
+.pprice{
+	text-decoration: line-through;
+	color: #999999;
+	padding-right: 3%;
+}
+.saleprice{
+	font-family: sans-serif;
+	font-size: 20px;
+	padding-right: 3%;
+}
+.info_table{
+	margin: 5% 0%;
+	font-size: 15px;
+}
+.select_t{
+	margin: 5% 0%;
+}
+.aomunt_btn{
+	display: block;
+	background-color: white;
+	font-size: 3px;
+	padding: 0 5px;
+	border: 1px solid #999999; 
+}
+.cancel_btn{
+	background-color: white;
+	font-size: 15px;
+	border: none;
+	padding: 7px;
+}
+.pointbox{
+	font-size: 8px;
+	color: #999999;
+}
+.totalprice{
+	text-align:right;
+	font-family: sans-serif;
+	font-size: 20px;
+	margin-left: 2%;
+}
+.btnbox{
+	margin: 7% 0%;
+	font-size: 15px;
+}
+.btnbox button{
+	background-color:white;
+	border: 1px solid #999999;
+	width:30%;
+	padding: 20px 10px;
+	margin-right: 2%;
+}
+#btn1{
+	background-color: black;
+	color: white;
+}
+#btn3{color: red;}
+
+

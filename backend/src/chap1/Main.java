@@ -1,54 +1,51 @@
 package chap1;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.InputStreamReader;
-import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
+import java.io.IOException;
  
 public class Main {
+	static int startstat = 0;
+	static int linkstat = 0;
+	static int N;
+	static int[][] arr;
+	static boolean[][] visit;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int T = Integer.parseInt(br.readLine());
- 
-		for(int i=0; i<T; i++) {
-			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
- 
-			int x1 = Integer.parseInt(st.nextToken());
-			int y1 = Integer.parseInt(st.nextToken());
-			int r1 = Integer.parseInt(st.nextToken());
- 
-			int x2 = Integer.parseInt(st.nextToken());
-			int y2 = Integer.parseInt(st.nextToken());
-			int r2 = Integer.parseInt(st.nextToken());
-			
-			 System.out.println(tangent(x1, y1, r1, x2, y2, r2));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		N = Integer.parseInt(br.readLine());
+		arr = new int[N][N];
+		
+		StringTokenizer st ;
+		for(int i=0; i<N; i++) {	
+			st = new StringTokenizer(br.readLine()," ");
+			for(int j=0; j<N; j++) {	
+				arr[i][j]=Integer.parseInt(st.nextToken());
+			}
 		}
+		bw.write(String.valueOf(startlink(0)));
+		bw.flush();
+		bw.close();
 	}
-	// 접점 개수 구하는 함수
-	public static int tangent(int x1, int y1, int r1, int x2, int y2, int r2) {
-		int distance = (int)(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));	// 중점간 거리 distance의 제곱 
- 
-		// 무한히 많은 경우  
-		if(x1 == x2 && y1 == y2 && r1 == r2) {
-			return -1;
-		}	
-		// 두 원이 접점없이 멀리 있을때
-		else if(distance > Math.pow(r1 + r2, 2)) {
-			return 0;
+	
+	//능력치를 비슷하게 맞추자..
+	public static int startlink(int team) {
+		if(team==N) {
+			return Math.abs(startstat-linkstat);
 		}
-		// 한원안에 다른원이 안에 있으나 겹치는 부분이 없을떄
-		else if(distance < Math.pow(r2 - r1, 2)) {
-			return 0;
+		for(int i=0; i<N; i++) {
+			for(int j=0; j<N; j++) {
+				
+				if(i!=j && !visit[i][j]) {
+					visit[i][j]=true;
+					startlink(team+1);
+					visit[i][j]=false  ;
+				}
+			}
 		}
-		// 한원안에 다른원이 안에 있고 내접할 때 
-		else if(distance == Math.pow(r2 - r1, 2)) {
-			return 1;
-		}	
-		// 외부에서 외접할 때 
-		else if(distance == Math.pow(r1 + r2, 2)) {
-			return 1;
-		}
-		else {
-			return 2;
-		}	
+		return 0;
 	}
+	
 }

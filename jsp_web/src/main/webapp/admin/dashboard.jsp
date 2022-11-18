@@ -12,7 +12,7 @@
 	<%
 	String mid = (String)session.getAttribute("mid");
 	if(mid==null|| !mid.equals("admin")){
-		response.sendRedirect("../member/login.jsp");
+		response.sendRedirect("/jsp_web/member/login.jsp");
 	}
 	%>
 	<marquee scrollamount="10"> 공지사항 표시되는 위치</marquee>
@@ -22,7 +22,7 @@
 		<ul class='sidemenu'>
 			<li class='side_item'><a onclick='pagechange("regist.jsp")'>제품 등록</a></li>
 			<li class='side_item'><a onclick='pagechange("list.jsp")'>제품 목록</a></li>
-			<li class='side_item'><a onclick=''>재고 관리</a></li>
+			<li class='side_item'><a onclick='pagechange("stock.jsp")'>재고 관리</a></li>
 			<li class='side_item'><a onclick=''>주문 관리</a></li>
 			<li class='side_item'><a onclick=''>매출 관리</a></li>
 			<li class='side_item'><a onclick=''>회원 목록</a></li>
